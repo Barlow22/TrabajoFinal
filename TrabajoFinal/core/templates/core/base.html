@@ -38,8 +38,19 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'servicios' %}">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <a class="btn btn-primary" href="{% url 'login' %}">Iniciar sesion</a>
-                        <a class="btn btn-primary" href="{% url 'registro' %}">Registrarse</a>
+                       <!-- <a class="btn btn-primary" href="{% url 'login' %}">Iniciar sesion</a>-->
+                        <!-- <a class="btn btn-primary" href="{% url 'logout' %}">Cerrar sesion</a>-->
+                       <!-- <a class="btn btn-primary" href="{% url 'registro' %}">Registrarse</a>-->
+                       <li class="nav-item text-white">
+                        {% if request.user.is_authenticated %}
+                            <a class="btn btn-primary" href="{% url 'editarPerfil' %}">Editar perfil</a>
+                            <a class="btn btn-primary" href="{% url 'logout' %}">Cerrar sesion</a>
+
+                        {% else %}
+                            <a class="btn btn-primary" href="{% url 'login' %}">Iniciar sesion</a>
+                            <a class="btn btn-primary" href="{% url 'registro' %}">Registrarse</a>
+                        {% endif %}
+                    </li>
                     </ul>
                 </div>
             </div>

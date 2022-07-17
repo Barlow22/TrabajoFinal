@@ -19,14 +19,12 @@ from django.urls import path, include
 urlpatterns = [
     # Paths del core
     path('', include('core.urls')),
-    # Paths de services
+    # Paths de servicios
     path('servicios/', include('servicios.urls')),
     # Paths de login
     path('login/', include('login.urls')),
-    # Paths de pages
-    #path('page/', include('pages.urls')),
-    # Paths de pages
-    #path('contact/', include('contact.urls')),
+    # Paths de contacto
+    #path('contacto/', include('contacto.urls')),
     # Paths del admin
     path('admin/', admin.site.urls),
 ]
