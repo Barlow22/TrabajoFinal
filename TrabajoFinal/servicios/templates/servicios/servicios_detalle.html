@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}servicios detallea{% endblock %}
+
+{% block content %}
+
+    <p>categoria: <i>{{ servicios.categoria }}</i></p>
+    <p>servicios: <i>{{ servicios.titulo }}</i></p>
+    <p>subtitulo: <i>{{ servicios.subtitulo }}</i></p>
+    <p>contenido: <i>{{ servicios.contenido }}</i></p>
+    <p>imagen: <i>{{ servicios.imagen }}</i></p>
+    <p>creado: <i>{{ servicios.creado }}</i></p>
+    <p>actualizado: <i>{{ servicios.actualizado }}</i></p>
+        <a href="{% url 'List' %}">Regresar</a>
+    </p>
+
+{% endblock %}

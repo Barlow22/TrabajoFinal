@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Servicios List{% endblock %}
+
+{% block content %}
+
+    <h1>Servicios</h1>
+    <ul>
+        {% for servicios in object_list %}
+
+            <li>
+                <p>nombre: {{ servicios.titulo }} </p>
+                <p>de que se trata: {{ servicios.contenido }} </p>
+                <p>{{ servicios.imagen }} </p>
+                <p> 
+                    <a href="{% url 'Detail' servicios.id %}">Ver</a> | 
+                    <a href="{% url 'Edit' servicios.id %}">Editar</a> | 
+                    <a href="{% url 'Delete' servicios.id %}">Borrar</a> 
+                
+                </p> 
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'New'  %}">Nuevo</a> | 
+
+{% endblock %}
