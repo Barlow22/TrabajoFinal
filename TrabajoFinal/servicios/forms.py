@@ -22,7 +22,7 @@ class ServiciosFormulario(forms.Form):
     categoria = forms.CharField(max_length=200, verbose_name="Category")
     titulo = forms.CharField(max_length=200, verbose_name="Título")
     subtitulo = forms.CharField(max_length=200, verbose_name="Subtítulo")
-    contenido = forms.TextInput(verbose_name="Contenido")
-    imagen = forms.ImageField(verbose_name="Imagen", upload_to="Masajes")
-    creado = forms.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
-    actualizado = forms.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
+    contenido = forms.CharField(label="Contenido", required=False, widget=forms.Textarea(
+        attrs={'class':'form-control', 'rows': 3, 'placeholder':'Escribe tu mensaje'}
+    ), min_length=10, max_length=1000)
+    #imagen = forms.ImageField(verbose_name="Imagen", upload_to="Servicios", required=False)

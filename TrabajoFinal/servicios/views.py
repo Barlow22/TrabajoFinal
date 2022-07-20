@@ -55,18 +55,18 @@ class ServiciosDetalle(DetailView):
 class ServiciosCreacion(CreateView):
 
       model = Servicios
-      success_url = "list"
-      fields = ['categoria', 'titulo', 'subtitulo', 'contenido', 'imagen']
+      success_url = reverse_lazy('List')
+      fields = ['categoria', 'titulo', 'subtitulo', 'contenido']
 
 
 class ServiciosUpdate(UpdateView):
 
       model = Servicios
-      success_url = "list"
-      fields  = ['categoria', 'titulo', 'subtitulo', 'contenido', 'imagen']
+      success_url = reverse_lazy('List')
+      fields  = ['categoria', 'titulo', 'subtitulo', 'contenido']
 
 
 class ServiciosDelete(DeleteView):
 
       model = Servicios
-      success_url = "list"
+      success_url = reverse_lazy('List')
