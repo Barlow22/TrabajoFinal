@@ -6,3 +6,6 @@ Dentro del desarrollo del trabajo, me enfoque principalmente en el back de la pa
 core, y la creacion del login.
 
 La mayor parte de la integracion con el front la realizaron los chicos.
+
+Video:
+https://youtu.be/R5OT0dWj5DM
