@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Servicios{% endblock %}
+
+{% block content %}
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    ¿Estás seguro que deseas borrar el curso "{{ object }}"?
+    <input type="submit" value="Borrar" />
+</form>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Servicios{% endblock %}
+
+{% block content %}
+
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<hr>
+
+<form class="" method="post">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    
+    <input type="submit" value="enviar">
+</form>
+
+
+
+{% endblock %}
